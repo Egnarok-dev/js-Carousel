@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(123, 124, 116, 0.5);
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    width: 650px;
+    height: 450px;
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    top: 10rem;
+    left: 27.8rem;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition: all 200ms linear;
+    
+}
+
+.slide img {
+    width: 650px;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    object-position: center;    
+    transition: all 1s;
+}
+
+.slides:hover img {
+    transform: scale(1.5);
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    font-size: 4rem;
+    background: none;
+    top: 50%;
+    border: none;
+    color: rgb(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:hover, 
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button.next {
+    top: 22rem;
+    right: 20rem;
+}
+
+.carousel-button.prev {
+    top: 22rem;
+    left: 20rem;
+}
